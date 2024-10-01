@@ -11,6 +11,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Initializes the FruitModel
         FruitModel fruitMod = new FruitModel(redSeekBar, greenSeekBar, blueSeekBar);
+        TextView textEle = findViewById(R.id.textElement);
 
 
         // Initializes the FruitController
-        FruitController FruitCon = new FruitController(fruitVi, fruitMod);
+        FruitController FruitCon = new FruitController(fruitVi, fruitMod, textEle);
         fruitVi.setFruitModel(fruitMod);
+
 
 
         fruitVi.setOnTouchListener(FruitCon);

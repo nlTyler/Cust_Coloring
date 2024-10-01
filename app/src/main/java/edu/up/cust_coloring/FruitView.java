@@ -9,7 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
-import android.widget.SeekBar;
+//import android.widget.SeekBar;
 
 public class FruitView extends SurfaceView {
 
