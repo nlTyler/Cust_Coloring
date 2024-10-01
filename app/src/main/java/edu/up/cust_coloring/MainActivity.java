@@ -1,5 +1,12 @@
-//@ Author: Tyler Crosbie
-//Date: September 23, 2024
+/**
+ * MainActivity initializes the user interface, sets up the SeekBars for color adjustment,
+ * and connects the FruitView, FruitModel, and FruitController for drawing and interaction
+ *
+ * @Author: Tyler Crosbie
+ * @Date: September 23, 2024
+
+
+ */
 
 
 package edu.up.cust_coloring;

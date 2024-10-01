@@ -1,5 +1,10 @@
-//@ Author: Tyler Crosbie
-//Date: September 23, 2024
+/**
+ * FruitModel manages the color state of each fruit and the bowl in the view.
+ * It adheres to changes in SeekBars for red, green, and blue values to adjust the color of the selected fruit.
+ *
+ * @author Tyler Crosbie
+ * @date September 23, 2024
+ */
 
 package edu.up.cust_coloring;
 
@@ -29,6 +34,7 @@ public class FruitModel {
     public int bowlColor = 0xFFd9ac6f;
 
 
+    // Checks which element the user has tapped on
     public boolean isAppleTouched(float x, float y) {
         return ((x > 815 && x < 935) && (y > 115 && y < 235));
     }
@@ -48,6 +54,7 @@ public class FruitModel {
         return ((x > 840 && x < 1240) && (y > 300 && y < 500));
     }
 
+    // returns the current color of the tapped element
     public int getColor() {
         if (isAppleTouched(xLoc, yLoc)) {
             return appleColor;
@@ -66,6 +73,7 @@ public class FruitModel {
         }
     }
 
+    // Sets the color of an element
     public void setColor(int color) {
         if (isAppleTouched(xLoc, yLoc)) {
             appleColor = color;
@@ -88,7 +96,6 @@ public class FruitModel {
     public SeekBar greenBar;
     public SeekBar blueBar;
 
-// Test
 
     //Initializes the model with the SeekBars
     public FruitModel (SeekBar skbr, SeekBar skbr2, SeekBar skbr3) {

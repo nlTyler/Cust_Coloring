@@ -1,5 +1,10 @@
-//@ Author: Tyler Crosbie
-//Date: September 23, 2024
+/**
+ * FruitController listens for touch events to identify which fruit the user has selected and updates the
+ * selected fruit's color using SeekBars for red, green, and blue values.
+ *
+ * @author Tyler Crosbie
+ * @date September 23, 2024
+ */
 
 package edu.up.cust_coloring;
 
@@ -28,6 +33,7 @@ public class FruitController implements SeekBar.OnSeekBarChangeListener, View.On
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
+        // Checks progress of the seekbars
         int redProg = fruitMod.redBar.getProgress();
         int greenProg = fruitMod.greenBar.getProgress();
         int blueProg = fruitMod.blueBar.getProgress();
@@ -62,6 +68,7 @@ public class FruitController implements SeekBar.OnSeekBarChangeListener, View.On
         fruitMod.yLoc = yLocation;
         int pixelColor = fruitMod.getColor();
 
+        // Sets the textView to the touched element
         if (fruitMod.isAppleTouched(fruitMod.xLoc, fruitMod.yLoc)) {
             selectedEle.setText("Selected Element: Apple");
         } else if (fruitMod.isOrangeTouched(fruitMod.xLoc, fruitMod.yLoc)) {

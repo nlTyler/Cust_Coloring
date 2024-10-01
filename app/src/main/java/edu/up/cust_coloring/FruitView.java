@@ -1,5 +1,9 @@
-//@ Author: Tyler Crosbie
-//Date: September 23, 2024
+/**
+ * FruitView draws the fruits and bowl on the canvas.
+ *
+ * @author Tyler Crosbie
+ * @date September 23, 2024
+ */
 
 package edu.up.cust_coloring;
 
@@ -101,6 +105,7 @@ public class FruitView extends SurfaceView {
         if (fruitMod.touched) {
             String elementTouched = "None";
 
+            // If an element has been touched, print out that element's name
             if (fruitMod.isAppleTouched(fruitMod.xLoc, fruitMod.yLoc)) {
                 elementTouched = "Apple";
             } else if (fruitMod.isPearTouched(fruitMod.xLoc, fruitMod.yLoc)) {
