@@ -88,7 +88,7 @@ public class FruitModel {
     public SeekBar greenBar;
     public SeekBar blueBar;
 
-
+// Test
 
     //Initializes the model with the SeekBars
     public FruitModel (SeekBar skbr, SeekBar skbr2, SeekBar skbr3) {
