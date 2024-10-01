@@ -13,7 +13,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
-//import android.widget.SeekBar;
 
 public class FruitView extends SurfaceView {
 
@@ -22,7 +21,7 @@ public class FruitView extends SurfaceView {
      Date: 23 September 2024
      Problem: to initialize paints and draw rectangles and circles
      Resource: CS 371 lab 3: Events
-     Solution: I used the format from the lab but changed values and names to adhere to my intended output
+     Solution: I used code from the lab but changed values and names to adhere to my intended output
      */
 
     //Initializes paints
@@ -62,8 +61,6 @@ public class FruitView extends SurfaceView {
         textPaint.setStyle(Paint.Style.FILL);
 
         setBackgroundColor(0xFF88edf2);
-
-
 
     }
     @Override
@@ -124,12 +121,9 @@ public class FruitView extends SurfaceView {
             textPaint.setTextSize(50);
             String location = "Selected Element: " + (elementTouched);
             canvas.drawText(location, 700, 800, textPaint);
-
         }
 
-
     } // onDraw
-
 
     public FruitModel getFruitModel() {
         return fruitMod;
@@ -139,4 +133,3 @@ public class FruitView extends SurfaceView {
         this.fruitMod = fruitMod;
     }
 }
-

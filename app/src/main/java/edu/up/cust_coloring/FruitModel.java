@@ -8,18 +8,8 @@
 
 package edu.up.cust_coloring;
 
-
 import android.graphics.Color;
 import android.widget.SeekBar;
-
-
-/**
- External Citation
- Date: 23 September 2024
- Problem: To create a constructor for the SeekBars
- Resource: Professor Nuxoll
- Solution: I used Professor Nuxoll's code to Initialize my SeekBars
- */
 
 public class FruitModel {
 
@@ -103,5 +93,4 @@ public class FruitModel {
         this.greenBar = skbr2;
         this.blueBar = skbr3;
     }
-
 }

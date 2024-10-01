@@ -9,10 +9,8 @@
 package edu.up.cust_coloring;
 
 import android.graphics.Color;
-//import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-//import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -39,27 +37,21 @@ public class FruitController implements SeekBar.OnSeekBarChangeListener, View.On
         int blueProg = fruitMod.blueBar.getProgress();
 
         fruitMod.setColor(Color.rgb(redProg, greenProg, blueProg));
-
         fruitVi.invalidate();
-
     }
-
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-
     }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-
     }
+
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if (fruitMod == null) {
             return false;
         }
-
-
 
         fruitMod.touched = true;
         float xLocation = motionEvent.getX();
@@ -92,8 +84,4 @@ public class FruitController implements SeekBar.OnSeekBarChangeListener, View.On
         fruitVi.invalidate();
         return true;
     }
-
-
-
 }
-

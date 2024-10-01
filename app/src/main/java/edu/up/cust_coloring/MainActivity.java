@@ -8,7 +8,6 @@
 
  */
 
-
 package edu.up.cust_coloring;
 
 import android.content.pm.ActivityInfo;
@@ -21,9 +20,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,29 +39,15 @@ public class MainActivity extends AppCompatActivity {
         FruitModel fruitMod = new FruitModel(redSeekBar, greenSeekBar, blueSeekBar);
         TextView textEle = findViewById(R.id.textElement);
 
-
         // Initializes the FruitController
         FruitController FruitCon = new FruitController(fruitVi, fruitMod, textEle);
         fruitVi.setFruitModel(fruitMod);
 
-
-
         fruitVi.setOnTouchListener(FruitCon);
-
 
         greenSeekBar.setOnSeekBarChangeListener(FruitCon);
         redSeekBar.setOnSeekBarChangeListener(FruitCon);
         blueSeekBar.setOnSeekBarChangeListener(FruitCon);
-
-
-
-
-
-
-
-
-
-
 
     }
 }
